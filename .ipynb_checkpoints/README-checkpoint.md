@@ -79,24 +79,9 @@ Several sql queries were performed to verify script performance.  These test wer
 ## Running Scripts  
 To run the scripts, download the github repsository (including data files) to your local computer.   Once there, run *create_tables.py* from a command prompt. This python script accepts four arguments from the command line - the host ip address, the server it is to connect to, as well as username and password to access the respective server (in that order).  For example: *create_tables.py 127.0.0.1 Udacity_Postgre postgres password* This will connect to the Udacity_Postgres_Database and create a new *sparkifydb* database with the needed Fact and Dimension tables.  Note if a sparkifydb database already exists, it will be removed and a new sparkifydb database created.
 
-Once the *sparkify* database is created with needed tables, the *etl.py* script must also be run from the command line. This script will pull data from the log and song datafiles and insert them into the *sparkify* tables.  The data to be read must be in a data folder in the working directory.  This python script also accepts four arguments from the command line - the host ip address, the database it is to connect to and insert data into, as well as username and password to access the respective database (in that order).  For example: *etl.py 127.0.0.1 sparkify postgres password*
+Once the *sparkify* database is created with needed tables, the *etl.py* script must also be run from the command line. This script will pull data from the log and song datafiles and insert them into the *sparkify* tables.  The data to be read must be in a data folder in the working directory.  This python script also accepts four arguments from the command line - the host ip address, the database it is to connect to and insert data into, as well as username and password to access the respective database (in that order).  For example: *etl.py 127.0.0.1 sparkify postgres password*.
     
-Dimension Tables
-users - users in the app
-user_id, first_name, last_name, gender, level
-songs - songs in music database
-song_id, title, artist_id, year, duration
-artists - artists in music database
-artist_id, name, location, latitude, longitude
-time - timestamps of records in songplays broken down into specific units
-start_time, hour, day, week, month, year, weekday
 
-"A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
-
-They'd like a data engineer to create a Postgres database with tables designed to optimize queries on song play analysis, and bring you on the project. Your role is to create a database schema and ETL pipeline for this analysis. You'll be able to test your database and ETL pipeline by running queries given to you by the analytics team from Sparkify and compare your results with their expected results.""
-
-Project Description
-"In this project, you'll apply what you've learned on data modeling with Postgres and build an ETL pipeline using Python. To complete the project, you will need to define fact and dimension tables for a star schema for a particular analytic focus, and write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL."
 
 **REFERENCES**
 Thierry Bertin-Mahieux, Daniel P.W. Ellis, Brian Whitman, and Paul Lamere. 
